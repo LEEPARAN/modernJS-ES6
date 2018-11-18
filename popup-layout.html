@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body { width:100%; background-color:rgba(0, 0, 0, 0.3); }
+        #layout { width:80%; height:220px; margin:25px auto; padding:40px 25px 50px; border:2px solid #ccc; }
+        .grid { float:left; width:50%; box-sizing:border-box; }
+        .grid1 dl dt { font-size:16px; color:#ddd; }
+        .grid1 dl dd { margin:0; padding:0; font-size:20px; color:#eee; }
+        .grid2 { padding:20px; }
+        .grid2 img { width:100%; }
+        .btn_link { 
+            display:block; width:160px; height:30px; padding-left:50px; color:#000; border:1px solid #000; 
+            background:url("long-arrow-right.png") no-repeat; background-size:25px 25px; background-position:5px center; box-sizing:border-box; text-decoration:none; line-height:28px; 
+        }
+    
+        @media screen and (max-width:660px) {
+            .grid { float:none; width:100%; margin:0 auto; text-align:justify; }
+            .grid2 { display:none; }
+        }
+    </style>
+</head>
+<body>
+    <div id="layout">
+        <div class="grid grid1">
+            <dl>
+                <dt>사랑스러운 프론트엔드 커플을 소개합니다!</dt>
+                <dd>최영은S2이한솔</dd>
+            </dl>
+            <a href="#" class="btn_link">바로가기 &gt; </a>
+        </div>
+        <div class="grid grid2">
+            <img src="o-LOVERS-HEART-570.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

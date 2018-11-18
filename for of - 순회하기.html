@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+var data = [1, 2, undefined, NaN, null, ""];
+/*
+data.forEach(function(val) {
+    console.log('value is ', val);
+})
+*/
+for(let idx in data) {
+    console.log(data[idx]);
+}
+</script>
+</body>
+</html>

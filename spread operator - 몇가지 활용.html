@@ -1,0 +1,13 @@
+<script>
+let pre = [100, 200, "hello", null];
+let newData = [0, 1, 2, 3, ...pre ,4];
+
+console.log(newData);
+
+let pre2 = [100, 200, 300];
+function  sum(a, b, c) {
+    return a + b + c;
+}
+sum.apply(null, pre2);
+sum(...pre);
+</script>

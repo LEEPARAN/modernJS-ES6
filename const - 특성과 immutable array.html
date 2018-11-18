@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function home() {
+        const list = ["apple", "orange", "watermelon"];
+        list.push("banana");
+        console.log(list);
+
+        // const는 불변이 아니다.
+        // 얼마든지 추가가 가능하며 값을 재할당할 경우에만 불가능하다.
+    }
+    home();
+    // immutable array를 어떻게 만들지?
+    const list = ["apple", "orange", "watermelon"];
+    list2 = [].concat(list, "banana");
+    console.log(list, list2);
+</script>
+</body>
+</html>
