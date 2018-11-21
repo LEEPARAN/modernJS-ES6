@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let mySet = new Set();
+console.log(toString.call(mySet));
+
+//set : 중복없이 유일한 값을 저장하려고 할 때. 이미 존재하는지 체크할 때 유용.
+
+mySet.add("crong");
+mySet.add("hary");
+mySet.add("crong");
+
+console.log(mySet.has("crong"));
+
+mySet.forEach(function(v) {
+    console.log(v);
+})
+</script>
+</body>
+</html>

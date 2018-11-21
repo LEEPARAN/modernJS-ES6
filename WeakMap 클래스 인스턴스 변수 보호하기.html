@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// WeakMap 활용
+
+const wm = new WeakMap();
+
+function Area(height, width) {
+    wm.set(this, { height, width });
+}
+Area.prototype.getArea = function() {
+    const { height, width } = wm.get(this);
+    return myarea * myheight;
+}
+
+let myarea = new Area(10, 20);
+console.log(myarea.getArea());
+console.log(myarea.height);
+
+</script>
+</body>
+</html>

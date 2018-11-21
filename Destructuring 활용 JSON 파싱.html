@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+const news = [
+    {
+        "title": "sbs",
+        "imgurl": "http://static..",
+        "newsList": [
+            "[가보니] 가상 경주도 즐기고..",
+            "리캡차'가 사라진다.",
+            "갤럭시S8 출시? '갤노트' 처리 계획부터 밝혀야"
+        ]
+    },
+    {
+        "title": "mbc",
+        "imgurl": "http://static..",
+        "newsList": [
+            "[안가보니] 가상 경주도 즐기고..",
+            "이밥차'가 사라진다.",
+            "LG G6 출시? 'LG V20' 처리 계획부터 밝혀야"
+        ]
+    }
+]
+/*
+let [, mbc] = news;
+let { title, imgurl } = mbc;
+console.log(title, imgurl);
+*/
+let [, {title, imgurl}] = news;
+console.log(title, imgurl);
+</script>
+</body>
+</html>
