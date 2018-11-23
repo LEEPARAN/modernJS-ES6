@@ -9,21 +9,43 @@
 <body>
 <script>
 // WeakMap 활용
-
+/*
 const wm = new WeakMap();
+// const obj = {};
 
 function Area(height, width) {
-    wm.set(this, { height, width });
+   wm.set(this, { height, width });
 }
 Area.prototype.getArea = function() {
     const { height, width } = wm.get(this);
-    return myarea * myheight;
+    return height * width;
 }
 
 let myarea = new Area(10, 20);
-console.log(myarea.getArea());
-console.log(myarea.height);
 
+console.log(myarea.getArea());
+myarea = null;
+console.log(wm)
+*/
+
+const obj = {};
+
+function Area(height, width) {
+  obj.height = height;
+  obj.width = width;
+}
+Area.prototype.getArea = function() {
+    return obj.height * obj.width;
+}
+
+let myarea = new Area(10, 20);
+
+console.log(obj);
+/*
+console.log(myarea.getArea());
+myarea = null;
+console.log(wm)
+*/
 </script>
 </body>
 </html>

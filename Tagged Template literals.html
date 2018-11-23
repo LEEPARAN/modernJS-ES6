@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="message"></div>
+<script>
+const data = [
+    {
+        name: 'coffee-bean',
+        order: true,
+        items: ['americano', 'milk', 'green-tea']
+    },
+    {
+        name: 'starbucks',
+        order: false
+    },
+    {
+        name: 'coffee-king',
+        order: true,
+        items: ['americano', 'latte']
+    }
+];
+let fn = function(tags, name, items) {
+    if(typeof items === "undefined") {
+        items = "<span style='color:red'>주문 가능한 상품이 없습니다.</span>";
+    }
+    return (tags[0] + name + tags[1] + items + tags[2]);
+}
+data.forEach((v) => {
+    const template = fn`<h2>welcome ${v.name} !!</h2>
+    <h4>주문가능항목</h4><div>${v.items}</div>`;
+    
+    document.getElementById("message").innerHTML += template;
+});
+</script>
+</body>
+</html>
