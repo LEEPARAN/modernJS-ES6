@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p>mydiv</p>
+<script>
+// this context of Arrow function
+
+/*
+const myObj = {
+    runTimeout() {
+        setTimeout(() => {
+            this.printData();
+        }, 200);
+    },
+    printData() {
+        console.log("hi codesquad!");
+    }
+}
+
+myObj.runTimeout();
+*/
+const el = document.querySelector("p");
+const myObj = {
+    regester() {
+        el.addEventListener("click", (e) => {
+            this.printData(e.target);
+        });
+    },
+    printData(el) {
+        console.log("clicked!!", el.innerText);
+    }
+}
+myObj.regester();
+</script>
+</body>
+</html>

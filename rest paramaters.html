@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// rest parameters
+/*
+function checkNum() {
+    const argArray = Array.prototype.slice.call(arguments);
+    console.log(toString.call(argArray));
+    const result = argArray.every((v) => typeof v === "number");
+    console.log(result);
+}
+*/
+/*
+function checkNum(...argArray) {
+    console.log(toString.call(argArray));
+    const result = argArray.every(function (v) {
+        return typeof v === "number";
+    }.bind(...argArray));
+    console.log(result);
+}
+*/
+function checkNum(...argArray) {
+    console.log(toString.call(argArray));
+    const result = argArray.every( (v) => typeof v === "number");
+    console.log(result);
+}
+// const result = checkNum(10, 2, "55");
+const result = checkNum(10, 2, 3, 4, 5, 55);
+
+</script>
+</body>
+</html>
